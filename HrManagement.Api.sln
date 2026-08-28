@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HrManagement.Api", "HrManagement.Api\HrManagement.Api.csproj", "{9FCB9A2E-8A6D-47CC-B915-E0FA4758458D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FCB9A2E-8A6D-47CC-B915-E0FA4758458D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FCB9A2E-8A6D-47CC-B915-E0FA4758458D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FCB9A2E-8A6D-47CC-B915-E0FA4758458D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FCB9A2E-8A6D-47CC-B915-E0FA4758458D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
