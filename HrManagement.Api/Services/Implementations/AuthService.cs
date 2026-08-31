@@ -5,7 +5,7 @@ using HrManagement.Api.Data;
 using HrManagement.Api.Entities;
 using HrManagement.Api.Repositories.Implementations;
 using HrManagement.Api.Repositories.Interfaces;
-using HrManagement.Api.Services.Interfaces;
+using HrManagement.Api.Services.Interfaces; 
 using Microsoft.IdentityModel.Tokens;
 
 namespace HrManagement.Api.Services.Implementations;
