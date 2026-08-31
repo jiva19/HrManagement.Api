@@ -13,9 +13,9 @@ namespace HrManagement.Api.Controllers;
 public class EmployeeController(IEmployeeService employeeService): ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> GetEmployeesList([FromQuery] string? name)
+    public async Task<IActionResult> GetEmployeesList([FromQuery] string? name,  [FromQuery] string? department)
     {
-        List<Employee> employees = await employeeService.GetAllEmployeesByNameAsync(name);
+        List<Employee> employees = await employeeService.SearchEmployeesAsync(name, department);
         return Ok(employees);
     }
     

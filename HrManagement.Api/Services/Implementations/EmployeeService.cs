@@ -6,21 +6,12 @@ namespace HrManagement.Api.Services.Implementations;
 
 public class EmployeeService(IEmployeeRepository employeeRepository): IEmployeeService
 {
-    public async Task<List<Employee>> GetAllEmployeesByNameAsync(string? name)
+    public Task<List<Employee>> SearchEmployeesAsync(string? name, string? department)
     {
-        List<Employee> employees;
-        
-        if (string.IsNullOrEmpty(name))
-        {
-            employees = await employeeRepository.GetAllEmployeesAsync();
-        }
-        else
-        { 
-          employees = await employeeRepository.GetEmployeeListByNameAsync(name);  
-        }
-        
-        return employees;
+        return employeeRepository.SearchEmployeesAsync(name, department);
     }
+
+
 
     public async  Task<bool> DeleteEmployeeByIdAsync(int id)
     {

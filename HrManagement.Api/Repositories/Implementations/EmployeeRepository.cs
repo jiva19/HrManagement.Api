@@ -7,6 +7,27 @@ namespace HrManagement.Api.Repositories.Implementations;
 
 public class EmployeeRepository(AppDbContext appDbContext): IEmployeeRepository
 {
+    public async Task<List<Employee>> SearchEmployeesAsync(string? name, string? department)
+    {
+
+        IQueryable<Employee> query = appDbContext.Employees;
+
+        
+        if (!string.IsNullOrEmpty(name))
+        {
+            query =  query.Where(x=>x.Name.Contains(name));
+        }
+
+        if (!string.IsNullOrEmpty(department))
+        {
+            query = query.Where(x => x.Department == department);
+        }
+        
+        return await query.ToListAsync();
+        
+        
+    }
+
     public async Task<List<Employee>> GetAllEmployeesAsync()
     {
         return await appDbContext.Employees.ToListAsync();
